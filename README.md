@@ -1,2 +1,2 @@
-# Santagift_Project
-santa gift project 
+# Exercise_Project
+Exercise project 
