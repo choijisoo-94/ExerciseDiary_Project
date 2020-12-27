@@ -90,7 +90,7 @@
 
 * 최지수 [(JisooChoi)](https://github.com/choijisoo-94)
 * 박다영 [(DayoungPark)](https://github.com/Da-0)
-* 박민영 [(MinyoungPark)](https://github.com/)
+* 박민영 [(MinyoungPark)](https://github.com/minyoung-park)
 
 ------------------
 ## :sparkles: Team Issues
