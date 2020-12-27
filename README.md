@@ -11,10 +11,9 @@
 -------------
 
 ## 프로젝트 소개
-
-    :loudspeaker:
-    :loudspeaker:
-    :loudspeaker:
+:mag:
+:mag:
+:mag:
 
 -------------
 
