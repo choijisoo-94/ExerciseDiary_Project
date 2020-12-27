@@ -12,10 +12,10 @@
 
 ## 프로젝트 소개
 
-    ▶
-    ▶
-    ▶
-    
+    :loudspeaker:
+    :loudspeaker:
+    :loudspeaker:
+
 -------------
 
 ## 이 프로젝트의 기술 구현 방식
