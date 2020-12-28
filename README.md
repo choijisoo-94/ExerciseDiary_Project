@@ -54,7 +54,7 @@
 
 ### :point_right: video table
 * program_no
-* program
+* playlist
 * youtube_url
 * youtuber
 * channel
