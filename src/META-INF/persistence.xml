@@ -4,6 +4,7 @@
 		<class>excerciseDiary.model.entity.Diary</class>
 		<class>excerciseDiary.model.entity.Purpose</class>
 		<class>excerciseDiary.model.entity.User</class>
+		<class>excerciseDiary.model.entity.Video</class>
 		<class>excerciseDiary.model.entity.Youtube</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
