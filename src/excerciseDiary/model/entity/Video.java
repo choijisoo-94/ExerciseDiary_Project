@@ -1,8 +1,12 @@
 package excerciseDiary.model.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,9 +37,14 @@ public class Video {
 	@Column(name="youtuber", length=50, nullable=false)
 	private String youtuber;
 	
-	@Column(name="channer", length=100, nullable=false)
-	private String channer;
+	@ManyToOne
+	@Column(name="channel", length=100, nullable=false)
+	private Youtube channel;
 	
-	@Column(name="purpose", length=20, nullable=false)
-	private String purpose;
+	@ManyToOne
+	@Column(length=20, nullable=false)
+	private Purpose purpose;
+	
+	@OneToMany(mappedBy="programNo") //1:다 관계
+	private List<Diary> diary;
 }
