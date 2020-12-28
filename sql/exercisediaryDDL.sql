@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS users;
 
-CREATE TABLE user (
+CREATE TABLE users (
 	user_id	VARCHAR2(20)	NOT NULL,
 	user_password	VARCHAR2(50)	NOT NULL,
 	user_name	VARCHAR2(50)	NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE purpose (
 	purpose	VARCHAR2(20)	NOT NULL
 );
 
-ALTER TABLE user ADD CONSTRAINT PK_USER PRIMARY KEY (
+ALTER TABLE users ADD CONSTRAINT PK_USER PRIMARY KEY (
 	user_id
 );
 
@@ -64,6 +64,48 @@ ALTER TABLE youtube ADD CONSTRAINT PK_YOUTUBE PRIMARY KEY (
 );
 
 ALTER TABLE purpose ADD CONSTRAINT PK_PURPOSE PRIMARY KEY (
+	purpose
+);
+
+ALTER TABLE users ADD CONSTRAINT FK_purpose_TO_users_1 FOREIGN KEY (
+	purpose
+)
+REFERENCES purpose (
+	purpose
+);
+
+ALTER TABLE diary ADD CONSTRAINT FK_users_TO_diary_1 FOREIGN KEY (
+	user_id
+)
+REFERENCES users (
+	user_id
+);
+
+ALTER TABLE diary ADD CONSTRAINT FK_purpose_TO_diary_1 FOREIGN KEY (
+	purpose
+)
+REFERENCES purpose (
+	purpose
+);
+
+ALTER TABLE diary ADD CONSTRAINT FK_video_TO_diary_1 FOREIGN KEY (
+	program_no
+)
+REFERENCES video (
+	program_no
+);
+
+ALTER TABLE video ADD CONSTRAINT FK_youtube_TO_video_1 FOREIGN KEY (
+	channel
+)
+REFERENCES youtube (
+	channel
+);
+
+ALTER TABLE video ADD CONSTRAINT FK_purpose_TO_video_1 FOREIGN KEY (
+	purpose
+)
+REFERENCES purpose (
 	purpose
 );
 
