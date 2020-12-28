@@ -54,27 +54,4 @@ public class User {
 	
 	@OneToMany(mappedBy="userId") //1:다 관계
 	private List<Diary> diary;
-	
-	/*@ManyToOne
-	@JoinColumn(name="activist_id", nullable=false)
-	private Activist activistId;*/
-	
-	
-	
-	/*@Id
-	@Column(name="activist_id", length=20, nullable=false)
-	private String activistId;
-	
-	@Column(length=20, nullable=false)
-	private String name;
-	
-	@Column(length=20, nullable=false)
-	private String password;
-	
-	@Column(length=50, nullable=false)
-	private String major;
-	
-	@OneToMany(mappedBy="activistId") //1:다 관계
-	private List<Probono_project> project;*/
-
 }
