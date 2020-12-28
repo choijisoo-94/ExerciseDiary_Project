@@ -39,7 +39,7 @@ public class Diary {
 	
 	@ManyToOne
 	@Column(name="user_id",length=20, nullable= false)
-	private User userId;
+	private Users userId;
 	
 	@ManyToOne
 	@Column(length=20, nullable=false)

@@ -28,7 +28,7 @@ public class Purpose {
 	private String purpose;
 	
 	@OneToMany(mappedBy="purpose") //1:다 관계
-	private List<User> user;
+	private List<Users> user;
 	
 	@OneToMany(mappedBy="purpose") //1:다 관계
 	private List<Diary> diary;

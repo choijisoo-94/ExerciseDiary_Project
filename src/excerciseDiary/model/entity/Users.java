@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -24,7 +23,7 @@ import lombok.ToString;
 @ToString
 
 @Entity
-public class User {
+public class Users {
 	
 	@Id
 	@Column(name="user_id", length=20, nullable=false)
@@ -54,4 +53,5 @@ public class User {
 	
 	@OneToMany(mappedBy="userId") //1:다 관계
 	private List<Diary> diary;
+	
 }
