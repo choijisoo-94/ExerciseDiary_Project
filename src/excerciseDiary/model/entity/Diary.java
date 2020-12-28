@@ -3,6 +3,7 @@ package excerciseDiary.model.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,13 +37,16 @@ public class Diary {
 	@Column(name="today_weight",length=20, nullable= false)
 	private String todayWeight;
 	
+	@ManyToOne
 	@Column(name="user_id",length=20, nullable= false)
-	private String userId;
+	private User userId;
 	
-	@Column(name="purpose",length=20, nullable= false)
-	private String purpose;
+	@ManyToOne
+	@Column(length=20, nullable=false)
+	private Purpose purpose;
 	
+	@ManyToOne
 	@Column(name="program_no",length=20, nullable= false)
-	private String programNo;
+	private Video programNo;
 
 }

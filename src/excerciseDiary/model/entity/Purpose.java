@@ -1,8 +1,11 @@
 package excerciseDiary.model.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,4 +26,13 @@ public class Purpose {
 	@Id
 	@Column(name="purpose", length=20, nullable=false)
 	private String purpose;
+	
+	@OneToMany(mappedBy="purpose") //1:다 관계
+	private List<User> user;
+	
+	@OneToMany(mappedBy="purpose") //1:다 관계
+	private List<Diary> diary;
+	
+	@OneToMany(mappedBy="purpose") //1:다 관계
+	private List<Video> video;
 }

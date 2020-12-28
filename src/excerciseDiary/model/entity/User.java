@@ -1,8 +1,13 @@
 package excerciseDiary.model.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -43,8 +48,16 @@ public class User {
 	@Column(name="user_weight", length=20, nullable=false)
 	private String userWeight;
 	
+	@ManyToOne
 	@Column(length=20, nullable=false)
-	private String purpose;
+	private Purpose purpose;
+	
+	@OneToMany(mappedBy="userId") //1:다 관계
+	private List<Diary> diary;
+	
+	/*@ManyToOne
+	@JoinColumn(name="activist_id", nullable=false)
+	private Activist activistId;*/
 	
 	
 	
