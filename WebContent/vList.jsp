@@ -12,9 +12,10 @@
 	<br>
 	<div align="right">
 	
-	<a href="excerciseDiary?command=getUser&userId=${sessionScope.id}">마이페이지</a> <a href="index.html">로그아웃</a>
+	<a href="excerciseDiary?command=getUser&userId=${sessionScope.id}">마이페이지</a>
 	</div>
 	<center>
+	${sessionScope.successMsg}
 		<h3>운동 영상 list</h3>
 		<hr>
 		<form action="excerciseDiary" method="post">

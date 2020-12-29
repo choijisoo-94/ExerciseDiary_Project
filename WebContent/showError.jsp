@@ -7,17 +7,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>error</title>
 </head>
 
 <body>
 <br><br><br>
 
 	<center>
-		<h3>${requestScope.errorMsg}</h3>
+	<h2>에러발생</h2>
+		<h3>${sessionScope.errorMsg}</h3>
 			
 		<br><br><br>
-		<a href="${pageContext.request.contextPath}/index.html">메인 화면으로 이동하기</a>
+		<a href="${pageContext.request.contextPath}/userLogin.html">로그인 화면으로 이동하기</a>
 	</center>
 	
 </body>

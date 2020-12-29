@@ -79,7 +79,7 @@ public class EDService {
 		boolean result = UserDAO.deleteUser(userId);
 		if(!result){
 			throw new NotExistException("회원 탈퇴 실패");
-		}
+		} 
 		return result;
 	}
 	
@@ -88,6 +88,26 @@ public class EDService {
 		return PurposeDAO.findPurpose(purpose);
 	}
 
+	/************************VIDEO************************/
+	
+	// 운동 목적별 영상 list 반환
+	public static ArrayList<Video> getVideoList(String purpose) throws SQLException, NotExistException{
+		ArrayList<Video> videoList = VideoDAO.getVideoList(purpose);
+		if(videoList == null) {
+			throw new NotExistException("해당 목적의 영상이 아직 존재하지 않습니다.");
+		}
+		return videoList;
+	}
+	
+	// 모든 영상 list 반환
+	public static ArrayList<Video> getAllVideoList() throws SQLException, NotExistException{
+		ArrayList<Video> allList = VideoDAO.getAllVideoList();
+		if(allList == null) {
+			throw new NotExistException("존재하는 영상이 없습니다.");
+		}
+		return allList;
+	}
+	
 	/************************DIARY************************/
 
 	// 다이어리 존재 여부 확인
@@ -137,25 +157,5 @@ public class EDService {
 			throw new NotExistException("해당 일기는 존재하지 않습니다.");
 		}
 		return diary;
-	}
-	
-	/************************VIDEO************************/
-	
-	// 운동 목적별 영상 list 반환
-	public static ArrayList<Video> getVideoList(String purpose) throws SQLException, NotExistException{
-		ArrayList<Video> videoList = VideoDAO.getVideoList(purpose);
-		if(videoList == null) {
-			throw new NotExistException("해당 목적의 영상이 아직 존재하지 않습니다.");
-		}
-		return videoList;
-	}
-	
-	// 모든 영상 list 반환
-	public static ArrayList<Video> getAllVideoList() throws SQLException, NotExistException{
-		ArrayList<Video> allList = VideoDAO.getAllVideoList();
-		if(allList == null) {
-			throw new NotExistException("존재하는 영상이 없습니다.");
-		}
-		return allList;
 	}
 }
