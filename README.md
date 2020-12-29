@@ -96,7 +96,7 @@
 ------------------
 ## :sparkles: Team Issues
 
-*
+* 타 프로젝트를 할 때보다 WEB에서 많은 에러가 나서 진행이 늦어졌고, 구현하려던 CRUD 를 부분적으로 완성시키지 못한 점이 아쉬웠다.
 *
 *
 
@@ -104,5 +104,6 @@
 
 ## :bulb: References
 
-*
-*
+* 엑셀 데이터 값 참고 : https://docs.google.com/spreadsheets/d/1Wd1iWMgHv1M3Js6eivVqQLa8NnXEUmkDi_J6qhA7qHE/edit?usp=sharing 
+* 오븐 앱 : https://ovenapp.io/view/XRvSHiCrtm4xgrfSSyI10tSUa14wV0Lw/fV7Lz
+* ERD CLOUD : 
