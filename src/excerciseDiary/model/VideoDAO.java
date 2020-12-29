@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 
 import excerciseDiary.model.entity.Video;
 import excerciseDiary.util.PublicCommon;
@@ -24,11 +25,10 @@ public class VideoDAO {
 		} finally {
 			em.close();
 		}
-		
 		return videoList;
 	}
 	
-	
+	// 운동 목적별 영상 list 반환
 	public static ArrayList<Video> getVideoList(String purpose) throws SQLException {
 		EntityManager em = PublicCommon.getEntityManager();
 		ArrayList<Video> videoList = null;
@@ -43,8 +43,6 @@ public class VideoDAO {
 		} finally {
 			em.close();
 		}
-		
 		return videoList;
-
 	}
 }
