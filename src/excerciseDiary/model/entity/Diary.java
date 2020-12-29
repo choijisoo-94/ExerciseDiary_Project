@@ -3,6 +3,7 @@ package excerciseDiary.model.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +18,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @Builder
-@ToString
+//@ToString
 
 @Entity
 public class Diary {
@@ -38,15 +39,14 @@ public class Diary {
 	private String todayWeight;
 	
 	@ManyToOne
-	@Column(name="user_id",length=20, nullable= false)
+	@JoinColumn(name="user_id", nullable= false)
 	private Users userId;
 	
 	@ManyToOne
-	@Column(length=20, nullable=false)
+	@JoinColumn(name="purpose", nullable=false)
 	private Purpose purpose;
 	
 	@ManyToOne
-	@Column(name="program_no",length=20, nullable= false)
+	@JoinColumn(name="program_no", nullable= false)
 	private Video programNo;
-
 }

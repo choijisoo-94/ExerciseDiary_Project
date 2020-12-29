@@ -4,7 +4,9 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -15,12 +17,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Builder
-@ToString
+//@ToString
 
 @Entity
 public class Users {
@@ -48,10 +50,27 @@ public class Users {
 	private String userWeight;
 	
 	@ManyToOne
-	@Column(length=20, nullable=false)
+	@JoinColumn(name="purpose", nullable=false)
 	private Purpose purpose;
 	
-	@OneToMany(mappedBy="userId") //1:다 관계
+	@OneToMany(mappedBy="userId", fetch = FetchType.EAGER) //1:다 관계
 	private List<Diary> diary;
+
+	public Users(String userId, String userPassword, String userName, String userGender, String userAge,
+			String userHeight, String userWeight, Purpose purpose) {
+		super();
+		this.userId = userId;
+		this.userPassword = userPassword;
+		this.userName = userName;
+		this.userGender = userGender;
+		this.userAge = userAge;
+		this.userHeight = userHeight;
+		this.userWeight = userWeight;
+		this.purpose = purpose;
+	}
 	
+	public Users(String userId) {
+		super();
+		this.userId = userId;
+	}
 }

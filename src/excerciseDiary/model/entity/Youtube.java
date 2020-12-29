@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -18,7 +19,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
+//@ToString
 @Builder
 
 @Entity
@@ -31,7 +32,7 @@ public class Youtube {
 	@Column(name="youtuber", length=20, nullable=false)
 	private String youtuber;
 	
-	@OneToMany(mappedBy="channel") //1:다 관계
+	@OneToMany(mappedBy="channel", fetch = FetchType.EAGER) //1:다 관계
 	private List<Video> video;
-	
+
 }
