@@ -20,14 +20,14 @@
 
 ## :couple: 운동 일기장 프로젝트 관계도 설정
 
-![화면 캡처 2020-12-27 205554](https://user-images.githubusercontent.com/73863771/103170222-fef12980-4885-11eb-9149-1e71d6fd7e1f.png)
+![화면 캡처 2020-12-29 053422](https://user-images.githubusercontent.com/73863771/103255649-7382b000-49cd-11eb-874c-421c5ec6dc5b.png)
 
 --------------
 
 ## :page_facing_up: 테이블 설명
 
 ### :point_right: user table
-* user_id
+* **user_id(PK)**
 * user_password
 * user_name
 * user_gender
@@ -38,12 +38,12 @@
 
 
 ### :point_right: youtube table
+* **channer(PK)**
 * youtuber
-* channer
 
 
 ### :point_right: diary table
-* diary_no
+* **diary_no(PK)**
 * diary_title
 * diary_content
 * write_date
@@ -54,7 +54,7 @@
 
 
 ### :point_right: video table
-* program_no
+* **program_no(PK)**
 * playlist
 * youtube_url
 * youtuber
@@ -62,7 +62,7 @@
 * purpose
 
 ### :point_right: purpose table
-* purpose
+* **purpose(PK)**
 
 --------------
 
@@ -77,7 +77,7 @@
 5. 일기작성 ((보류)일기 작성시 시청했던 운동의 프로그램명 검색후 프로그램 번호로 저장)
     * 일기 CRUD 
         * C : 일기 작성
-        * R : (보류)유튜버? 프로그램? 검색시 해당 영상을 보고 운동했던 날의 일기가 보여지게?
+        * R : 프로그램 검색시 해당 영상을 보고 운동했던 날의 일기 검색
         * U : 일기 수정
         * D : 일기 삭제
 6. 일기 디테일
@@ -106,4 +106,4 @@
 
 * 엑셀 데이터 값 참고 : https://docs.google.com/spreadsheets/d/1Wd1iWMgHv1M3Js6eivVqQLa8NnXEUmkDi_J6qhA7qHE/edit?usp=sharing 
 * 오븐 앱 : https://ovenapp.io/view/XRvSHiCrtm4xgrfSSyI10tSUa14wV0Lw/fV7Lz
-* ERD CLOUD : 
+* ERD CLOUD : https://www.erdcloud.com/d/ERGqnY8qjTShkzJcq
