@@ -3,7 +3,7 @@
 	<persistence-unit name="oracleDBUse">
 		<class>excerciseDiary.model.entity.Diary</class>
 		<class>excerciseDiary.model.entity.Purpose</class>
-		<class>excerciseDiary.model.entity.User</class>
+		<class>excerciseDiary.model.entity.Users</class>
 		<class>excerciseDiary.model.entity.Video</class>
 		<class>excerciseDiary.model.entity.Youtube</class>
 		<properties>
